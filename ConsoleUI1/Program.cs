@@ -9,9 +9,9 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            // ProductTest();
+             ProductTest();
 
-            CategoryTest();
+            //CategoryTest();
 
         }
 
@@ -29,9 +29,9 @@ namespace ConsoleUI
         {
             ProductManager productManager = new ProductManager(new EfProductDal());
 
-            foreach (var item in productManager.GetAllByCategoryId(2))
+            foreach (var item in productManager.GetProductDetails())
             {
-                Console.WriteLine(item.ProductName);
+                Console.WriteLine(item.ProductName + " / " + item.CategoryName);
             }
         }
     }
